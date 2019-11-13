@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Tours &verbar; Re-Cycle – Guided bicycle tours in Haugesund</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Explore Haugesund by bike with Re-Cycle. Check out our popular tours and join us!">
+	<meta name="author" content="Asbj&oslash;rn Kallevik">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+<body>
+	
+	<!-- HEADER-->
+	<header id="page-header" role="banner">
+		<!-- NAVIGATION -->
+		<nav role="navigation">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="tours.html" class="active">Tours</a></li>
+				<li><a href="about.html">About us</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+	<!-- MAIN SECTION -->
+	<main role="main">
+		<header id="page-title">
+			<h1>Tours</h1>
+		</header>
+		<article id="booking">
+			<h2>Book a tour</h2>
+			<form>
+				<label>
+					<select name="tour">
+						<option value="tour-discover">Discover Haugesund</option>
+						<option value="tour-hills">Hills & Shore Tour</option>
+						<option value="tour-architectour">Architec-Tour</option>
+						<option value="tour-vikingtrails">Viking Trails</option>
+					</select>
+				</label>
+				<label>
+					<input type="submit" name="submit" value="Go &gt;&gt;">
+				</label>
+			</form>
+		</article>
+		<!-- TOURS SECTION -->
+		<section id="tours">
+			<header>
+				<h2>Our tours</h2>
+				<hr>
+			</header>
+			<div class="flexbox">
+				<article>
+					<header>
+						<div class="tour-header">
+							<img src="images/tour_discover-haugesund_580.jpg">
+							<h2 id="discover" class="tour-title">Discover Haugesund</h2>
+						</div>
+					</header>
+					<section class="tour-description">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat.</p>
+					</section>
+					<section class="tour-map">
+						<div class="map" id="tour-map-discover"></div>
+						<script>
+						function initMap() {
+						  var haraldshaugen = {lat: 59.4289908, lng: 5.2567159};
+						  var map = new google.maps.Map(
+						      document.getElementById('tour-map-discover'), {zoom: 15, center: haraldshaugen});
+						  var marker = new google.maps.Marker({position: haraldshaugen, map: map});
+						}
+					    </script>
+					    <script async defer
+					    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyLHzdOOC-1ZL1wf35bKcwmx0DxgjSt8I&callback=initMap">
+					    </script>
+					</section>	
+				</article>
+				<article>
+					<header>
+						<div class="tour-header">
+							<img src="images/tour_hills_580.jpg">
+							<h2 id="hills" class="tour-title">Hills & Shore Tour</h2>
+						</div>
+					</header>
+					<section class="tour-description">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat.</p>
+					</section>
+					<section class="tour-map">
+						<p>MAP IS COMING</p>
+					</section>
+				</article>
+				<article>
+					<header>
+						<div class="tour-header">
+							<img src="images/tour_architectour_580.jpg">
+							<h2 id="architectour" class="tour-title">Architec-Tour</h2>
+						</div>
+					</header>
+					<section class="tour-description">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</section>
+					<section class="tour-map">
+						<p>MAP IS COMING</p>
+					</section>
+				</article>
+				<article>
+					<header>
+						<div class="tour-header">
+							<img src="images/tour_viking-trails_580.jpg">
+							<h2 id="viking-trails" class="tour-title">Viking Trails</h2>
+						</div>
+					</header>
+					<section class="tour-description">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</section>
+					<section class="tour-map">
+						<p>MAP IS COMING</p>
+					</section>
+				</article>
+			</div>	
+		</section>
+
+	</main>
+	<!-- FOOTER -->
+	<footer id="page-footer">
+		<p>&copy; Re-Cycle 2018</p>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,750 @@
+
+@font-face {
+	font-family: "quicksand-bold";
+	src: url("../fonts/quicksand-bold.woff2") format("woff2");
+	src: url("../fonts/quicksand-bold.woff") format("woff");
+	src: url("../fonts/quicksand-bold.ttf") format("truetype");
+}
+@font-face {
+	font-family: "quicksand-regular";
+	src: url("../fonts/quicksand-regular.woff2") format("woff2");
+	src: url("../fonts/quicksand-regular.woff") format("woff");
+	src: url("../fonts/quicksand-regular.ttf") format("truetype");
+}
+@font-face {
+	font-family: "raleway-regular";
+	src: url("../fonts/raleway-regular.woff2") format("woff2");
+	src: url("../fonts/raleway-regular.woff") format("woff");
+	src: url("../fonts/raleway-regular.ttf") format("truetype");
+}
+
+/*--------Colors------------
+Black		#181818		rgb(24, 24, 24)
+White		#FCFCFC		rgb(252, 252, 252)
+Yellow 		#FFCB0D		rgb(255, 203, 13)
+Blue		#04ABCC		rgb(4, 171, 204)
+Brown/red	#820900		rgb(130, 9, 0)
+*/
+
+
+/* GLOBAL
+-----------------------------------------------------------------------------*/
+main, article, header, nav, section, aside, footer {
+	display: block;
+}
+
+body {
+	max-width: 1200px;
+	margin: 0 auto;
+	background-color: #181818;
+	color: #FCFCFC;
+}
+
+article {
+	padding: 0 10px;	
+}
+
+h2 {
+	font-size: 2em;
+	margin-bottom: 0;
+}
+
+h3 {
+	margin-top: 15px;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	margin: 0 auto;
+	border-radius: 5px;
+}
+
+#page-header + * {
+	padding-top: 70px;
+}
+
+#hero-img {
+	background-color: #181818;
+	background-image: url('../images/hero-image_1200.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: top center;
+}
+
+.flexbox {
+	-ms-box-orient: horizontal;
+  	display: -webkit-box;
+  	display: -moz-box;
+  	display: -ms-flexbox;
+  	display: -moz-flex;
+ 	display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: space-between; 
+  	justify-content: space-between;
+	flex-flow: wrap;
+	width: 100%;
+}
+
+hr {
+	border-color: #FFCB0D;
+	border-color: rgba(255, 203, 13, 0.4);
+	border-style: dashed;
+}
+
+/* form */
+input[type="text"],
+textarea {
+	background-color: #FCFCFC;
+	font-size: 110%;
+	border: 3px solid #FCFCFC;
+	border-radius: 2px;
+	padding: 5px;
+}
+input[type="text"]:hover,
+textarea:hover {
+	border-color: #04ABCC;
+}
+input[type="submit"] {
+	padding: 1px 20px; 
+	font-size: 1.2em;
+	background-color: #820900;
+	color: #FCFCFC;
+	height: 30px;
+	border-radius: 2px;
+	cursor: pointer;
+}
+input[type="submit"]:hover {
+	background-color: #FFCB0D;
+	color: #181818;
+}
+input[type="submit"]:active {
+	font-style: oblique;
+}
+
+/* FONT DECLARATIONS 
+-------------------------------*/
+
+body,
+p {
+	font-family: "raleway-regular", helvetica, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+#page-header nav,
+#banner {
+	font-family: "quicksand-bold", arial, sans-serif;
+}
+
+/* HEADER AND NAVIGATION
+-----------------------------------------------------------------------------*/
+#page-header {
+	width: 100%;
+	max-width: 1200px;
+	height: 70px;
+	position: fixed;
+	top: 0;
+	z-index: 2;
+	background-size: auto 100%;
+	background: url('../images/logo_re-cycle.png') #181818 no-repeat 20px;
+	background-color: rgba(24, 24, 24, 0.95);
+}
+
+#page-header h1 {
+	text-indent: -9999px;
+}
+
+#page-header nav {
+	position: relative;
+	top: 35px;
+	right: 20px;
+	float: right;
+	text-transform: uppercase;
+}
+
+ /* Main navigation */
+nav ul {
+	padding-left: 0;
+	margin: 0;	
+}
+
+nav ul li {
+	display: inline-block;
+	letter-spacing: .1em;
+}
+
+nav ul li:first-child {
+	margin-left: 0;
+}
+
+nav ul a {
+	display: block;
+	padding: 5px 10px;
+	border-radius: 8px;
+}
+
+nav ul a:link,
+nav ul a:visited {
+	text-decoration: none;
+	color: #FCFCFC;
+}
+nav ul a.active {
+	color: #FFCB0D;
+}
+
+nav ul a:hover {
+	background-color: #FFCB0D;
+	color: #181818;
+}
+nav ul a:active {
+	font-style: oblique;
+}
+
+/* BANNER AREA
+(home page)
+-----------------------------------------------------------------------------*/
+#banner {
+	height: 620px;
+}
+#banner h2,
+#page-title h1 {
+	margin-top: 20px;
+	position: relative;
+	left: 20px;
+	z-index: 1;
+	font-size: 2.8em;
+	letter-spacing: .05em;
+}
+#banner h2 span,	/* Promotional text - home */
+#page-title h1 {	/* Page titles - other pages */
+	display: inline-block;
+	position: relative;
+	padding: 0 10px;
+	border-radius: 2px;
+	background-color: #04ABCC;
+	background-color: rgba(4, 171, 204, 0.7);
+
+}
+
+#banner h2 span:nth-child(3) {
+	left: 220px;
+}
+#banner h2 span:last-child {
+	left: 115px;
+}
+
+#cta-btn {
+	position: relative;
+	left: 75%;
+	top: 270px;
+	text-align: center;
+	text-transform: uppercase;
+	display: inline-block;
+	letter-spacing: .1em;
+	
+}
+#cta-btn a {
+	background-color: #FFCB0D;
+	display: block;
+	padding-top: 35px;
+	width: 135px;
+	height: 100px;
+	border-radius: 50%;
+}
+#cta-btn a:link,
+#cta-btn a:visited {
+	text-decoration: none;
+	color: #181818;
+}
+#cta-btn a:hover {
+	background-color: #820900;
+	color: #FCFCFC;
+}
+#cta-btn a:active {
+	font-style: oblique;
+}
+/* MAIN CONTENT
+-----------------------------------------------------------------------------*/
+#page-title {
+	background-image: url('../images/header_1200_3.jpg');
+	background-position: top center;
+	background-repeat: no-repeat;
+	margin-top: 10px;
+	height: 150px;
+}
+#page-title h1 {
+	left: 10%;
+	top: 20%;
+}
+
+article header h2,
+aside h2 {
+	background-color: #181818;
+	background-color: rgba(24, 24, 24, 0.8);
+	border-radius: 5px;
+	display: inline-block;
+	margin-left: 5px;
+	padding: 0 10px;
+}
+
+article#city-info > *,
+article#reviews > * {
+	margin: 0 10px;
+}
+
+article#pop-tours section {
+	flex: 1;
+	padding: 0 5px;
+}
+
+
+article#city-info {
+	flex: 4;
+	padding-right: 0;
+}
+
+article#reviews {
+	flex: 4;
+	padding-left: 0;
+}
+aside#social {
+	
+	flex: 1;
+}
+/* Explore Haugesund section */
+#city-info section {
+	background-color: #181818;
+	background-color: rgba(24, 24, 24, 0.95);
+	border-radius: 5px;
+	margin-top: 10px;
+	padding: 5px;
+}
+/* Reviews section */
+#reviews section {
+	background-color: #04ABCC;
+	background-color: rgba(4, 171, 204, 0.9);
+	color: #181818;
+	padding: 10px 10px 1px 10px;
+	margin-bottom: 10px;
+	border-radius: 5px;
+}
+#reviews h3 {
+	line-height: 0;
+	color: #181818;
+}
+#reviews p {
+	margin-top: -15px;
+	font-style: italic;
+}
+#reviews img {
+	width: 80px;
+	margin-right: 10px;
+	border-radius: 50%;
+	float: left;
+}
+/* Social section */
+aside {
+	text-align: center;
+}
+
+#social a {
+	color: #FCFCFC;
+	font-size: 5em;
+	display: block;
+}
+#social a:hover {
+	color: #04ABCC;
+}
+
+#social ul {
+	padding-left: 0;
+	margin-top: -10px;
+}
+#social ul li {
+	display: inline-block;
+	margin-bottom: 10px;
+}
+
+
+/* Tours page */
+
+#booking {
+	border: 1px dashed #FFCB0D;
+	width: 40%;
+	margin: 40px auto;
+	padding-bottom: 5px;
+	background-color: #181818;
+	border-radius: 2px;	
+}
+
+#booking form {
+	text-align: center;
+	margin: 0 auto;
+}
+
+#booking h2 {
+	text-align: center;
+	margin-top: 0;
+}
+
+#booking select {
+	font-size: 110%;
+	
+}
+#booking input[type="submit"] {
+	font-size: 100%;
+}
+
+#tours > header {
+	text-indent: 15px;
+	margin: 0 10px;
+}
+
+#tours article {
+	flex: 1;
+	min-width: 40%;
+}
+.tour-header {
+	position: relative;	
+}
+	
+.tour-title {
+	background-color: #FFCB0D;
+	background-color: rgba(255, 203, 13, 0.9);
+	color: #820900;
+	font-size: 2em;
+	margin: 0;
+	padding: 5px 10px;
+	border-radius: 2px;
+	position: absolute;
+	bottom: 5%;
+	left: 10px;
+}
+.popular {	/* Smaller title text for home page */
+	font-size: 1.2em;
+	bottom: 75%;
+}
+
+.tour-description {
+	width: 54%;
+	float: left;
+
+}
+.tour-map {
+	display: inline;
+	width: 45%;
+	float: right;
+}
+
+.tour-map .map {
+	width: 90%;
+	height: 200px;
+	margin-bottom: 20px;
+}
+
+/* About us page */
+#about-us-background {
+	background-image: url('../images/about-us_bg_1200.jpg');
+	background-repeat: no-repeat;
+	background-position: bottom right;
+	height: 900px;
+}
+#about-us-content {
+	width: 70%;
+	padding: 20px;
+}
+#about-us article {
+	background-color: #181818;
+	background-color: rgba(24, 24, 24, 0.95);
+	flex: 2;
+}
+#about-us article:last-of-type {
+	background-color: #04ABCC;
+	background-color: rgba(4, 171, 204, 0.9);
+	color: #181818;
+	border-radius: 2px;
+	flex: 1;
+}
+
+
+/* Contact page */
+#contact article {
+	flex: 1;
+}
+
+#contact form input[type="submit"] {
+	float: right;
+	
+}
+#contact form {
+	overflow: hidden;
+}
+#contact-form {
+	float: left;
+	margin-left: 20px;
+}
+#contact-details {
+	background-color: #04ABCC;
+	background-color: rgba(4, 171, 204, 0.7);
+	border-radius: 2px;
+	margin-top: 20px;
+	width: 200px;
+	float: left;
+	margin-left: 20px;
+	text-align: center;
+}
+#contact-details h3 {
+	margin-bottom: -15px;
+	letter-spacing: 0.1em;
+}
+
+#map-contact {
+	margin: 0 auto 20px auto;
+	width: 400px;
+	height: 400px;
+}
+
+/* FOOTER 
+-----------------------------------------------------------------------------*/
+#page-footer {
+	height: 70px;
+	padding-top: 20px;
+	text-align: center;
+	border-top: 1px dashed #FCFCFC;
+}
+
+/*TABLET STYLES
+-----------------------------------------------------------------------------*/
+@media screen and (min-width: 481px) and (max-width: 800px) {
+
+	/*GLOBAL*/
+
+	#page-header + * {
+		padding-top: 100px;
+	}
+
+	#hero-img {
+		 background-image: url('../images/hero-image_800.jpg');
+	}
+	.flexbox {
+		flex-flow: wrap;
+	}
+	/*HEADER AND NAVIGATION*/
+
+	#page-header {
+		height: 100px;
+		background-position: 10px 0;
+		background-position: center 0;		
+	}
+	#page-header nav {
+		float: none;
+		position: static;
+		text-align: center;
+		margin-top: 65px;
+	}
+	nav ul li {
+		letter-spacing: 0;
+	}
+	nav ul a {
+		padding: 5px;
+	}
+
+	/*BANNER AREA*/
+	
+	#banner {
+		width: 95%;
+		height: 600px;
+		position: static;
+	}
+
+	#banner h2 {
+		font-size: 2.2em;
+	}
+	#cta-btn {
+		top: 270px;
+		left: 75%;
+	}
+
+	#banner h2 span:nth-child(3) {
+		left: 60px;
+	}
+	#banner h2 span:last-child {
+		left: 20px;
+	}
+
+	/*Home page*/
+
+	article#pop-tours section:first-of-type {
+		min-width: 100%;
+		margin-bottom: 10px;
+	}
+
+
+	article#pop-tours section:first-of-type .tour-title {
+		bottom: 80%;
+		left: 30%;
+	}
+
+	#city-info,
+	#reviews {
+		min-width: 95%;
+		max-width: 95%;
+	}
+	
+	#social li {
+		margin-right: 40px;
+	}
+	
+	#social a:active {
+		color: #04ABCC;
+	}
+
+	/*Tours page*/
+
+	#booking {
+		width: 80%;
+	}
+
+	#tours article {
+		min-width: 95%;
+	}
+
+	/* About us page */
+	#about-us-background {
+		background-image: url('../images/about-us_bg_800.jpg');
+		height: 1100px;
+	}
+	#about-us-content {
+		width: 70%;
+	}
+	#about-us article {
+		flex: 1;
+		min-width: 90%;
+	}
+	#about-us article:last-of-type {
+		flex: 1;
+}
+
+}
+
+/*MOBILE STYLES
+-----------------------------------------------------------------------------*/
+@media screen and (max-width: 480px) {
+
+	/* GLOBAL */
+	body {
+
+	}
+	#page-header + * {
+		padding-top: 100px;
+	}
+	.flexbox {
+		flex-flow: column;
+	}
+
+
+	/* HEADER AND NAVIGATION */
+	#page-header {
+		height: 100px;
+		background-position: 10px 0;
+		background-position: center 0;
+		
+	}
+	#page-header nav {
+		float: none;
+		position: static;
+		text-align: center;
+		margin-top: 65px;
+	}
+	nav ul li {
+		letter-spacing: 0;
+	}
+	nav ul a {
+		padding: 5px;
+	}
+
+	/*BANNER AREA*/
+
+	#banner {
+		width: 95%;
+		height: 550px;
+		position: static;
+		
+	}
+
+	#banner h2 {
+		font-size: 1.6em;
+	}
+	#cta-btn {
+		top: 40px;
+		left: 10%;
+	}
+
+	#hero-img {
+		background-image: url('../images/hero-image_480.jpg');
+	}
+	#banner h2 span:nth-child(3) {
+		left: 60px;
+	}
+	#banner h2 span:last-child {
+		left: 20px;
+	}
+
+	#pop-tours {
+		width: 95%;
+	}
+
+	/* Home page */
+
+	article#pop-tours section,
+	article#city-info,
+	article#reviews,
+	aside#social {
+		min-width: 90%;
+	}
+
+	article#pop-tours section {
+		margin-bottom: 10px;
+	}
+
+	#social li {
+		margin-right: 10px;
+	}
+
+	
+
+	/* Tours page */
+	
+	#booking {
+		width: 90%;
+	}
+
+	#tours article {
+		min-width: 95%;
+	}
+
+	/* About us page */
+	#about-us-background {
+		background-image: url('../images/about-us_bg_800.jpg');
+		height: 1200px;
+	}
+	#about-us-content {
+		width: 70%;
+	}
+	#about-us article {
+		flex: 1;
+		min-width: 90%;
+	}
+	#about-us article:last-of-type {
+		flex: 1;
+}
+	/*Contact page*/
+	#map-contact {
+		width: 300px;
+		height: 300px;
+}
+
+}
