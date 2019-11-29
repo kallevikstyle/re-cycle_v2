@@ -403,7 +403,7 @@ aside {
 	margin: 0 10px;
 }
 
-#tours article {
+#tours .tour-container {
 	flex: 1;
 	min-width: 40%;
 }
@@ -608,7 +608,7 @@ aside {
 		width: 80%;
 	}
 
-	#tours article {
+	#tours .tour-container {
 		min-width: 95%;
 	}
 
@@ -722,7 +722,7 @@ aside {
 		width: 90%;
 	}
 
-	#tours article {
+	#tours .tour-container {
 		min-width: 95%;
 	}
 
