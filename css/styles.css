@@ -73,17 +73,15 @@ img {
 }
 
 .flexbox {
-	-ms-box-orient: horizontal;
-  	display: -webkit-box;
-  	display: -moz-box;
-  	display: -ms-flexbox;
-  	display: -moz-flex;
- 	display: -webkit-flex;
+	
 	display: flex;
-	-webkit-justify-content: space-between; 
-  	justify-content: space-between;
+	/*-webkit-justify-content: space-between; */
+  	justify-content: center;
 	flex-flow: wrap;
-	width: 100%;
+	/*width: 100%;*/
+}
+.tour-container a {
+	color: #FCFCFC;
 }
 
 hr {
@@ -295,12 +293,24 @@ article#reviews > * {
 	margin: 0 10px;
 }
 
-article#pop-tours section {
-	flex: 1;
+#pop-tours .tour-container {
+	/*flex: 1;*/
+	margin-top: 5px;
 	padding: 0 5px;
+	position: relative;
+}
+#pop-tours .tour-container img {
+	max-width: 375px;
+}
+#pop-tours .tour-container h2 {
+	font-size: 1em;
+	bottom: 75%;
 }
 
-
+#pop-tours .tour-container p {
+	bottom: 0px;
+	/*left: 10px;*/
+}
 article#city-info {
 	flex: 4;
 	padding-right: 0;
@@ -403,14 +413,18 @@ aside {
 	margin: 0 10px;
 }
 
+#allTours {
+	width: 100%;
+}
+
 #tours .tour-container {
-	flex: 1;
-	min-width: 40%;
+	width: 500px;
+	position: relative;
+	margin: 5px;
 }
-.tour-header {
-	position: relative;	
+#tours .tour-header p {
+	top: 0px;
 }
-	
 .tour-title {
 	background-color: #FFCB0D;
 	background-color: rgba(255, 203, 13, 0.9);
@@ -420,9 +434,20 @@ aside {
 	padding: 5px 10px;
 	border-radius: 2px;
 	position: absolute;
-	bottom: 5%;
+	bottom: 20%;
 	left: 10px;
 }
+
+.tour-header p {
+	position: absolute;
+	padding: 10px 5px;
+	width: 50%;
+	background-color: #181818;
+	background-color: rgba(24, 24, 24, 0.7);
+	/*background-color: black;*/
+
+}
+
 .popular {	/* Smaller title text for home page */
 	font-size: 1.2em;
 	bottom: 75%;
@@ -577,16 +602,7 @@ aside {
 
 	/*Home page*/
 
-	article#pop-tours section:first-of-type {
-		min-width: 100%;
-		margin-bottom: 10px;
-	}
-
-
-	article#pop-tours section:first-of-type .tour-title {
-		bottom: 80%;
-		left: 30%;
-	}
+	
 
 	#city-info,
 	#reviews {
@@ -609,7 +625,10 @@ aside {
 	}
 
 	#tours .tour-container {
-		min-width: 95%;
+		/*min-width: 95%;*/
+	}
+	#tours .tour-container {
+		max-width: 580px;
 	}
 
 	/* About us page */
@@ -723,9 +742,15 @@ aside {
 	}
 
 	#tours .tour-container {
-		min-width: 95%;
+		width: 95%;
+		margin: 0 auto;
 	}
-
+	#tours .tour-container h2 {
+		font-size: 1em;
+	}
+	#tours .tour-container p {
+		font-size: .9em;
+	}
 	/* About us page */
 	#about-us-background {
 		background-image: url('../images/about-us_bg_800.jpg');

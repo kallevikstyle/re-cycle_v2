@@ -1,4 +1,40 @@
+function loadTours(tours) {
+	const allTours = document.querySelector('#allTours'),
+		popularTours = document.querySelector('#popularTours');
 
+	if (allTours) {
+		for (let i = 0; i < tours.length; i++) {
+			listAllTours(allTours, tours[i]);
+		}
+	} else if (popularTours) {
+		for (let i = 0; i < tours.length; i++) {
+			if (tours[i].popular) {
+				listAllTours(popularTours, tours[i]);
+			}
+			
+		}
+	}
+}
+// Display all tours
+function listAllTours(parent, tour) {
+	const tourContainer = document.createElement('div'),
+		tourHeader = document.createElement('div'),
+		shortText = document.createElement('div');
+
+	tourContainer.className = "tour-container";
+	tourHeader.className = "tour-header";
+	shortText.className = "short-description";
+
+	tourHeader.innerHTML = `
+		<a href="#"><img src="${tour.imageUrl}" alt="${tour.name}">
+		<h2 id="${tour.id}" class="tour-title">${tour.name}</h2>
+		<p>${tour.shortdescription}</p></a>
+	`;
+
+	tourContainer.appendChild(tourHeader);
+	parent.appendChild(tourContainer);
+
+}
 
 // Get tour data from JSON
 (function() {
@@ -18,7 +54,8 @@
     "shortdescription": "See the most noteworthy places of Haugesund in just one hour",
     "imageUrl": "images/tour_discover-haugesund_580.jpg",
     "thumbnail": "images/tour_discover-haugesund_375.jpg",
-    "id": 1
+    "id": "discover",
+    "popular": true
   },
   {
     "name": "Hills &amp; Shore Tour",
@@ -26,7 +63,8 @@
     "shortdescription": "Experience the rough shoreside and the nice view from the top of the hill",
     "imageUrl": "images/tour_hills_580.jpg",
     "thumbnail": "images/tour_hills_375.jpg",
-    "id": 2
+    "id": "hills",
+    "popular": true
   },
   {
     "name": "Architec&hyphen;Tour",
@@ -34,7 +72,8 @@
     "shortdescription": "Bicycle through the town history by visiting the most famous buildings",
     "imageUrl": "images/tour_architectour_580.jpg",
     "thumbnail": "images/tour_architectour_375.jpg",
-    "id": 3
+    "id": "architectour",
+    "popular": false
   },
   {
     "name": "Viking Trails",
@@ -42,8 +81,10 @@
     "shortdescription": "Follow the trail of the old viking kings",
     "imageUrl": "images/tour_viking-trails_580.jpg",
     "thumbnail": "images/tour_viking-trails_375.jpg",
-    "id": 4
+    "id": "viking-trails",
+    "popular": true
   }
 ];
+loadTours(tours);
 // TEMPORARY----------
 })();
