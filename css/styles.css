@@ -423,7 +423,7 @@ aside {
 	margin: 5px;
 }
 #tours .tour-header p {
-	top: 0px;
+	bottom: 0px;
 }
 .tour-title {
 	background-color: #FFCB0D;
@@ -434,7 +434,7 @@ aside {
 	padding: 5px 10px;
 	border-radius: 2px;
 	position: absolute;
-	bottom: 20%;
+	bottom: 75%;
 	left: 10px;
 }
 
@@ -743,7 +743,7 @@ aside {
 
 	#tours .tour-container {
 		width: 95%;
-		margin: 0 auto;
+		margin: 10px auto;
 	}
 	#tours .tour-container h2 {
 		font-size: 1em;
