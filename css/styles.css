@@ -392,6 +392,22 @@ aside#social {
 	border-radius: 50%;
 	float: left;
 }
+#reviews .showReviews {
+	background-color: #181818;
+	background-color: rgba(24, 24, 24, 0.95);
+	text-align: center;
+	padding: 2px 0;
+	cursor: pointer;
+	margin-bottom: 10px;	
+}
+#reviews .showReviews:hover {
+	background-color: #04ABCC;
+	background-color: rgba(4, 171, 204, 0.9);
+
+	-webkit-transition: all 0.2s ease-out;
+  	-moz-transition: all 0.2s ease-out;
+  	transition: all 0.2s ease-out;
+}
 /* Social section */
 aside {
 	text-align: center;
