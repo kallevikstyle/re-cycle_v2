@@ -146,11 +146,17 @@ h4,
 	position: fixed;
 	top: 0;
 	z-index: 2;
-	background-size: auto 100%;
-	background: url('../images/logo_re-cycle.png') #181818 no-repeat 20px;
+	background-color: #181818;
 	background-color: rgba(24, 24, 24, 0.95);
 }
-
+#page-header #logo {
+	position: absolute;
+	width: 165px;
+	height: 70px;
+	margin-left: 20px;
+	background-image: url('../images/logo_re-cycle.png');
+	background-repeat: no-repeat;
+}
 #page-header h1 {
 	text-indent: -9999px;
 }
@@ -564,6 +570,10 @@ aside {
 		background-position: 10px 0;
 		background-position: center 0;		
 	}
+	#page-header #logo {
+		left: 50%;
+		margin-left: -82px;
+	}
 	#page-header nav {
 		float: none;
 		position: static;
@@ -669,8 +679,11 @@ aside {
 	#page-header {
 		height: 100px;
 		background-position: 10px 0;
-		background-position: center 0;
-		
+		background-position: center 0;	
+	}
+	#page-header #logo {
+		left: 50%;
+		margin-left: -82px;
 	}
 	#page-header nav {
 		float: none;
