@@ -240,32 +240,36 @@ nav ul a:active {
 
 #cta-btn {
 	position: relative;
+	height: 135px;
+	width: 135px;
 	left: 75%;
-	top: 270px;
+	top: 300px;
 	text-align: center;
 	text-transform: uppercase;
 	display: inline-block;
 	letter-spacing: .1em;
-	
-}
-#cta-btn a {
 	background-color: #FFCB0D;
-	display: block;
-	padding-top: 35px;
-	width: 135px;
-	height: 100px;
 	border-radius: 50%;
 }
-#cta-btn a:link,
-#cta-btn a:visited {
+#cta-btn span {
+	position: absolute;
+	display: inline-block;
+	width: 55px;
+	height: 63px;
+	left: 50%;
+	margin-left: -27.5px;
+	top: 50%;
+	margin-top: -31.5px
+	/*padding-top: 35px;*/
+}
+#banner a:link,
+#banner a:visited {
 	text-decoration: none;
 	color: #181818;
 }
-#cta-btn a:hover {
-	background-color: #820900;
-	color: #FCFCFC;
+#banner a:hover {
 }
-#cta-btn a:active {
+#banner a:active {
 	font-style: oblique;
 }
 /* MAIN CONTENT
