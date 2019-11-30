@@ -75,10 +75,8 @@ img {
 .flexbox {
 	
 	display: flex;
-	/*-webkit-justify-content: space-between; */
   	justify-content: center;
 	flex-flow: wrap;
-	/*width: 100%;*/
 }
 .tour-container a {
 	color: #FCFCFC;
