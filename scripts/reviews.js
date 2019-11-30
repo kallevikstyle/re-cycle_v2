@@ -1,4 +1,34 @@
-// Get tour data from JSON
+
+function loadReviews(reviews) {
+  // Sort the array in random order
+  reviews.sort(function(a, b) {
+    return 0.5 - Math.random();
+  });
+
+  // Load two random reviews on main page
+  displayReviews(reviews.pop());
+  displayReviews(reviews.pop());
+
+}
+
+// Display reviews on page
+function displayReviews(item) {
+  const parent = document.querySelector('#reviews'),
+    reviewContainer = document.createElement('section');
+
+  reviewContainer.innerHTML = `
+    <img src="${item.imageUrl}" alt="Review by ${item.name}">
+    <h3>${item.name}</h3>
+    <h4>${item.profession}<br>${item.place}</h4>
+    <p>${item.review}</p>
+  `;
+
+  parent.appendChild(reviewContainer); 
+}
+
+
+
+// Get reviews from JSON
 (function() {
 	 //fetch('http://kallevikstyle.no/portfolio1/re-cycle/json/reviews.json')
 	 //.then(result => result.json())
@@ -23,7 +53,7 @@
     "profession": "Musician",
     "place": "Limerick, Ireland",
     "review": "These guys really know how to show their city from its best side. If you like to bicycle, book a tour with Re-Cycle!",
-    "imageUrl": "images/reviews/review_lenny_cravings.jpg",
+    "imageUrl": "images/reviews/review_lenny-cravings.jpg",
     "id": 2
   },
   {
@@ -47,7 +77,7 @@
     "profession": "Painter",
     "place": "Madrid, Spain",
     "review": "Top score from me! I totally recommend doing this, there is no better way to explore a city than on a bicycle seat. The architecture tour was really interesting, and at the same time I enjoyed the fresh air this town has to offer. ¡Estupendo!",
-    "imageUrl": "images/reviews/review_steve-works.jpg",
+    "imageUrl": "images/reviews/review_pedro-colores.jpg",
     "id": 5
   }
 ];

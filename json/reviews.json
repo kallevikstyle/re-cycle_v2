@@ -12,7 +12,7 @@
     "profession": "Musician",
     "place": "Limerick, Ireland",
     "review": "These guys really know how to show their city from its best side. If you like to bicycle, book a tour with Re-Cycle!",
-    "imageUrl": "images/reviews/review_lenny_cravings.jpg",
+    "imageUrl": "images/reviews/review_lenny-cravings.jpg",
     "id": 2
   },
   {
@@ -36,7 +36,7 @@
     "profession": "Painter",
     "place": "Madrid, Spain",
     "review": "Top score from me! I totally recommend doing this, there is no better way to explore a city than on a bicycle seat. The architecture tour was really interesting, and at the same time I enjoyed the fresh air this town has to offer. ¡Estupendo!",
-    "imageUrl": "images/reviews/review_steve-works.jpg",
+    "imageUrl": "images/reviews/review_pedro-colores.jpg",
     "id": 5
   }
 ]
