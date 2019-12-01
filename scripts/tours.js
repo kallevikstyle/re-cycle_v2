@@ -26,7 +26,7 @@ function listAllTours(parent, tour) {
 	shortText.className = "short-description";
 
 	tourHeader.innerHTML = `
-		<a href="#"><img src="${tour.imageUrl}" alt="${tour.name}">
+		<a href="tours.html"><img src="${tour.imageUrl}" alt="${tour.name}">
 		<h2 id="${tour.id}" class="tour-title">${tour.name}</h2>
 		<p>${tour.shortdescription}</p></a>
 	`;
